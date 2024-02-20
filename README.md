@@ -1,6 +1,7 @@
 # Tutorial Mod
 
 视频系列：[Re：从零开始的模组编程](https://www.bilibili.com/video/BV1XY4y1t7eX)
+
 本仓库以[fabric-example-mod](https://github.com/FabricMC/fabric-example-mod)为模板创建，以下是他们的README.md：
 
 ## Setup
