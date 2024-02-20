@@ -1,0 +1,8 @@
+{
+  "item.tutorial_mod.something": "Something",
+
+  "block.tutorial_mod.some_block": "Some Block",
+
+  "itemGroup.tutorial_mod.items": "Some Items",
+  "itemGroup.tutorial_mod.blocks": "Some Blocks"
+}
