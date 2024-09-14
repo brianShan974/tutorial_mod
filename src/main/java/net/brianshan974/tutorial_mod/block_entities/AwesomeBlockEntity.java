@@ -1,6 +1,5 @@
 package net.brianshan974.tutorial_mod.block_entities;
 
-import net.fabricmc.fabric.mixin.transfer.ItemMixin;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
@@ -27,11 +26,15 @@ public class AwesomeBlockEntity extends BlockEntity implements Clearable {
 
     public boolean addItem(ItemStack itemStack) {
         ArmorMaterial material;
-        if ((material = getMaterial(itemStack)) == null) return false;
-        if (this.material == null) this.material = getMaterial(itemStack);
-        if (material.equals(ArmorMaterials.TURTLE)) return false;
-        if (!material.equals(this.material)) return false;
-        EquipmentSlot slot = ((ArmorItem)itemStack.getItem()).getSlotType();
+        if ((material = getMaterial(itemStack)) == null)
+            return false;
+        if (this.material == null)
+            this.material = getMaterial(itemStack);
+        if (material.equals(ArmorMaterials.TURTLE))
+            return false;
+        if (!material.equals(this.material))
+            return false;
+        EquipmentSlot slot = ((ArmorItem) itemStack.getItem()).getSlotType();
         switch (slot) {
             case HEAD -> {
                 if (helmet.equals(ItemStack.EMPTY)) {

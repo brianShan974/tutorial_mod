@@ -26,10 +26,14 @@ public class TutorialMod implements ModInitializer {
 
 	public static final Item SOMETHING = new Something(new FabricItemSettings().group(ItemGroups.ITEMS));
 
-	public static final Block SOME_BLOCK = new Block(FabricBlockSettings.of(Material.TNT).strength(0.5f, 1200.0f).sounds(BlockSoundGroup.GRASS));
-	public static final Block AWESOME_BLOCK = new AwesomeBlock(FabricBlockSettings.of(Material.TNT).strength(0.5f, 1200.0f).sounds(BlockSoundGroup.GRASS));
-	public static final BlockItem SOME_BLOCK_ITEM = new BlockItem(SOME_BLOCK, new FabricItemSettings().group(ItemGroups.BLOCKS));
-	public static final BlockItem AWESOME_BLOCK_ITEM = new BlockItem(AWESOME_BLOCK, new FabricItemSettings().group(ItemGroups.BLOCKS));
+	public static final Block SOME_BLOCK = new Block(
+			FabricBlockSettings.of(Material.TNT).strength(0.5f, 1200.0f).sounds(BlockSoundGroup.GRASS));
+	public static final Block AWESOME_BLOCK = new AwesomeBlock(
+			FabricBlockSettings.of(Material.TNT).strength(0.5f, 1200.0f).sounds(BlockSoundGroup.GRASS));
+	public static final BlockItem SOME_BLOCK_ITEM = new BlockItem(SOME_BLOCK,
+			new FabricItemSettings().group(ItemGroups.BLOCKS));
+	public static final BlockItem AWESOME_BLOCK_ITEM = new BlockItem(AWESOME_BLOCK,
+			new FabricItemSettings().group(ItemGroups.BLOCKS));
 
 	@Override
 	public void onInitialize() {

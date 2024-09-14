@@ -29,12 +29,15 @@ public class Something extends Item {
             double f = user.getZ();
             for (int i = 0; i < 16; ++i) {
                 double g = user.getX() + (user.getRandom().nextDouble() - 0.5) * 6.0;
-                double h = MathHelper.clamp(user.getY() + (double)(user.getRandom().nextInt(16) - 8), (double)world.getBottomY(), (double)(world.getBottomY() + ((ServerWorld)world).getLogicalHeight() - 1));
+                double h = MathHelper.clamp(user.getY() + (double) (user.getRandom().nextInt(16) - 8),
+                        (double) world.getBottomY(),
+                        (double) (world.getBottomY() + ((ServerWorld) world).getLogicalHeight() - 1));
                 double j = user.getZ() + (user.getRandom().nextDouble() - 0.5) * 6.0;
                 if (user.hasVehicle()) {
                     user.stopRiding();
                 }
-                if (!user.teleport(g, h, j, true)) continue;
+                if (!user.teleport(g, h, j, true))
+                    continue;
                 SoundEvent soundEvent = SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT;
                 world.playSound(null, d, e, f, soundEvent, SoundCategory.PLAYERS, 1.0f, 1.0f);
                 user.playSound(soundEvent, 1.0f, 1.0f);
